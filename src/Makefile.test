@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -Wextra
+LDFLAGS = -lsecp256k1 -lcrypto
+
+all: signature_test
+
+signature_test: signature_test.c
+	$(CC) $(CFLAGS) -o signature_test signature_test.c $(LDFLAGS)
+
+run: signature_test
+	./signature_test
+
+clean:
+	rm -f signature_test 

@@ -1,0 +1,30 @@
+# DONATE ADDRESS
+# BSC/ERC 0x51b9ef319a7d0390652ad6596bf2003c163e0c5c
+# SOL DCZiRbgLCVdLJKYqxGyj5s3y3KLUXbkw2REw2oZoL2MC
+# CLC Miner Configuration
+
+# Server URL
+server = "https://clc.ix.tc"
+
+# Directory to store mined coins
+rewards_dir = "./rewards"
+
+# Number of mining threads (-1 for auto)
+thread = 24
+
+# Job update interval in seconds
+job_interval = 3
+
+# Report interval in seconds
+report_interval = 10
+
+# Command to run when a coin is mined (use %cid% for coin ID)
+on_mined = "Great Oh My Dear Miner!"
+
+# Pool configuration
+pool_secret = "fasjkdhASFA12AS"
+
+# Reporting configuration
+[reporting]
+report_server = "https://clc.ix.tc:3000"
+report_user = "ICYSKELETON" 
