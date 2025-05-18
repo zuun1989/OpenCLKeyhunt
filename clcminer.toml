@@ -4,13 +4,13 @@
 # CLC Miner Configuration
 
 # Server URL
-server = "https://clc.ix.tc"
+server = "https://pool.clc.ix.tc"
 
 # Directory to store mined coins
 rewards_dir = "./rewards"
 
 # Number of mining threads (-1 for auto)
-thread = 24
+thread = 2
 
 # Job update interval in seconds
 job_interval = 3
@@ -19,12 +19,12 @@ job_interval = 3
 report_interval = 10
 
 # Command to run when a coin is mined (use %cid% for coin ID)
-on_mined = "Great Oh My Dear Miner!"
+on_mined = "clc-wallet add-coin rewards/%cid%.coin"
 
 # Pool configuration
-pool_secret = "fasjkdhASFA12AS"
+pool_secret = "secret123"
 
 # Reporting configuration
 [reporting]
 report_server = "https://clc.ix.tc:3000"
-report_user = "ICYSKELETON" 
+report_user = "clgt" 
