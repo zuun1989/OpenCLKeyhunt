@@ -32,21 +32,19 @@ sudo apt-get install libcurl4-openssl-dev libsecp256k1-dev libssl-dev
 
 # CentOS/RHEL
 sudo yum install libcurl-devel libsecp256k1-devel openssl-devel
-```
 
 2. Build the project:
 
-```bash
 make
-```
 
 ## Configuration
 
-Edit `clcminer.toml` to configure the miner:
+Edit clcminer.conf to configure the miner:
 
-```toml
+toml
+/*
 # Server URL
-server = "https://clc.ix.tc"
+server = "https://pool.clc.ix.tc"
 
 # Directory to store mined coins
 rewards_dir = "./rewards"
@@ -68,10 +66,10 @@ pool_secret = ""
 
 # Reporting configuration
 [reporting]
-report_server = ""
+report_server = "https://clc.ix.tc:3000"
 report_user = ""
-```
 
+*/
 ## Usage
 
 1. Configure the miner by editing `clcminer.toml`
