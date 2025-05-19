@@ -39,7 +39,7 @@ make
 
 ## Configuration
 
-Edit clcminer.conf to configure the miner:
+Edit cminer.conf to configure the miner:
 
 toml
 /*
