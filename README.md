@@ -59,7 +59,7 @@ job_interval = 1
 report_interval = 10
 
 # Command to run when a coin is mined (use %cid% for coin ID)
-on_mined = ""
+on_mined = "clc-wallet add-coin rewards/%cid%.coin"
 
 # Pool configuration
 pool_secret = ""
