@@ -214,7 +214,7 @@ int main() {
     init_mining();
     
     // Load configuration
-    MinerConfig* config = load_config("clcminer.toml");
+    MinerConfig* config = load_config("cminer.conf");
     if (!config) {
         printf("Failed to load configuration\n");
         return 1;
