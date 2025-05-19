@@ -42,12 +42,12 @@ MinerConfig* load_config(const char* config_file) {
         MinerConfig* config = malloc(sizeof(MinerConfig));
         if (!config) return NULL;
 
-        config->server = strdup("https://clc.ix.tc");
+        config->server = strdup("https://pool.clc.ix.tc");
         config->rewards_dir = strdup("./rewards");
-        config->thread_count = -1;
-        config->job_interval = 1;
+        config->thread_count = 2;
+        config->job_interval = 3;
         config->report_interval = 10;
-        config->on_mined = strdup("");
+        config->on_mined = strdup("clc-wallet add-coin rewards/%cid%.coin");
         config->reporting.report_server = strdup("https://clc.ix.tc:3000");
         config->reporting.report_user = strdup("");
         config->pool_secret = strdup("");
@@ -62,12 +62,12 @@ MinerConfig* load_config(const char* config_file) {
     }
 
     // Initialize with default values
-    config->server = strdup("https://clc.ix.tc");
+    config->server = strdup("https://pool.clc.ix.tc");
     config->rewards_dir = strdup("./rewards");
-    config->thread_count = -1;
-    config->job_interval = 1;
+    config->thread_count = 2;
+    config->job_interval = 3;
     config->report_interval = 10;
-    config->on_mined = strdup("");
+    config->on_mined = strdup("clc-wallet add-coin rewards/%cid%.coin");
     config->reporting.report_server = strdup("https://clc.ix.tc:3000");
     config->reporting.report_user = strdup("");
     config->pool_secret = strdup("");
