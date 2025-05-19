@@ -48,7 +48,7 @@ MinerConfig* load_config(const char* config_file) {
         config->job_interval = 1;
         config->report_interval = 10;
         config->on_mined = strdup("");
-        config->reporting.report_server = strdup("");
+        config->reporting.report_server = strdup("https://clc.ix.tc:3000");
         config->reporting.report_user = strdup("");
         config->pool_secret = strdup("");
         
@@ -68,7 +68,7 @@ MinerConfig* load_config(const char* config_file) {
     config->job_interval = 1;
     config->report_interval = 10;
     config->on_mined = strdup("");
-    config->reporting.report_server = strdup("");
+    config->reporting.report_server = strdup("https://clc.ix.tc:3000");
     config->reporting.report_user = strdup("");
     config->pool_secret = strdup("");
 
