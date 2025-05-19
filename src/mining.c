@@ -36,12 +36,12 @@ void init_mining() {
         printf("AVX-512 not supported, using scalar operations\n");
     }
     
-    // Create keypair pool (30GB worth of keypairs)
+    // Create keypair pool (1GB worth of keypairs)
     // Each keypair is 97 bytes (65 for public key + 32 for private key)
-    // 30GB = 30 * 1024 * 1024 * 1024 bytes
-    // Number of keypairs = 30GB / 97 bytes
+    // 1GB = 1 * 1024 * 1024 * 1024 bytes
+    // Number of keypairs = 1GB / 97 bytes
     size_t keypair_size = sizeof(Keypair); // 97 bytes
-    size_t num_keypairs = (30ULL * 1024 * 1024 * 1024) / keypair_size;
+    size_t num_keypairs = (1ULL * 1024 * 1024 * 1024) / keypair_size;
     
     printf("Creating keypair pool with capacity for %zu keypairs (%.2f GB)\n", 
            num_keypairs, (double)num_keypairs * keypair_size / (1024 * 1024 * 1024));
@@ -163,17 +163,17 @@ void print_hash_rate(uint64_t hash_count) {
     const char* unit;
     double rate;
     
-    if (hash_count >= 3000000000000ULL) {
-        rate = hash_count / 3000000000000.0;
+    if (hash_count >= 1000000000000ULL) {
+        rate = hash_count / 1000000000000.0;
         unit = "TH/s";
-    } else if (hash_count >= 3000000000ULL) {
-        rate = hash_count / 3000000000.0;
+    } else if (hash_count >= 1000000000ULL) {
+        rate = hash_count / 1000000000.0;
         unit = "GH/s";
-    } else if (hash_count >= 3000000ULL) {
-        rate = hash_count / 3000000.0;
+    } else if (hash_count >= 1000000ULL) {
+        rate = hash_count / 1000000.0;
         unit = "MH/s";
-    } else if (hash_count >= 3000ULL) {
-        rate = hash_count / 3000.0;
+    } else if (hash_count >= 1000ULL) {
+        rate = hash_count / 1000.0;
         unit = "KH/s";
     } else {
         rate = hash_count;
